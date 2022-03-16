@@ -25,5 +25,15 @@
     }
     
     const populateTodos = () => {
-    
+        console.log(arrayOfTodos)
+        let ol = document.getElementById('todo-list');
+        for (let index = 0; index < arrayOfTodos.length; index++) {
+            const obj = arrayOfTodos[index];
+            console.log(obj.title);
+
+            let li = document.createElement('li');
+            var title = document.createTextNode(obj.title);
+            li.appendChild(title);
+            ol.appendChild(li);
+        }
     }
